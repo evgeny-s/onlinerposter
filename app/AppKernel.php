@@ -16,12 +16,18 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 
+            //vendors
+            new FOS\UserBundle\FOSUserBundle(),
+            new Sonata\CoreBundle\SonataCoreBundle(),
+            new Sonata\BlockBundle\SonataBlockBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+            new Sonata\AdminBundle\SonataAdminBundle(),
+
             //my own
             new OnlinerBundle\OnlinerBundle(),
             new UserBundle\UserBundle(),
-
-            //vendors
-            new FOS\UserBundle\FOSUserBundle(),
+            new DataBundle\DataBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
