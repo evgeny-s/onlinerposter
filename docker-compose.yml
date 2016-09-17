@@ -1,0 +1,20 @@
+version: '2'
+ 
+services:
+    nginx:
+        image: nginx:latest
+        ports:
+            - "80:80"
+            - "443:443"
+        links:
+            - app
+        volumes:
+            - ./:/var/www
+            - ./app/config/nginx/poster.conf:/etc/nginx/conf.d/poster.conf
+        restart: always
+    app:
+        build: app/config/docker
+        restart: always
+        volumes:
+          - ./:/var/www
+        working_dir: /var/www
