@@ -1,4 +1,4 @@
 services:
-#    onliner.example:
-#        class: OnlinerBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]
+    onliner.commenter:
+        class: OnlinerBundle\Service\Commenter
+        arguments: ["@buzz"]
