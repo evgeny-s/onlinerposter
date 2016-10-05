@@ -1,0 +1,5 @@
+services:
+    data.proverb_repository:
+        class: DataBundle\Repository\ProverbRepository
+        factory: ["@doctrine.orm.entity_manager", getRepository]
+        arguments: [DataBundle\Entity\Proverb]

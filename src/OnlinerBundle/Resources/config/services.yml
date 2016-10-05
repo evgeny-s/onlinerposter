@@ -2,3 +2,7 @@ services:
     onliner.commenter:
         class: OnlinerBundle\Service\Commenter
         arguments: ["@buzz"]
+
+    onliner.proverbs_collector:
+        class: OnlinerBundle\Service\ProverbsCollector
+        arguments: ["@buzz"]

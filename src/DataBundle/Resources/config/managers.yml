@@ -1,0 +1,6 @@
+services:
+    data.proverb_manager:
+        class: DataBundle\Manager\ProverbManager
+        arguments: ['@data.proverb_repository']
+        calls:
+            - [setEntityManager, ['@doctrine.orm.entity_manager']]
